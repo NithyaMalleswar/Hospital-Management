@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -31,11 +30,11 @@ const Header = () => {
 
         <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
-            <li><Link to="/" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</Link></li>
-            <li><Link to="/about" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</Link></li>
-            <li><Link to="/services" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</Link></li>
-            <li><Link to="/products" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('products'); }}>Products</Link></li>
-            <li><Link to="/contact" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</Link></li>
+            <li><a href="#home" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a></li>
+            <li><a href="#about" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
+            <li><a href="#services" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
+            <li><a href="#products" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('products'); }}>Products</a></li>
+            <li><a href="#contact" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
           </ul>
         </nav>
       </div>

@@ -1,9 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="footer">
@@ -20,11 +26,11 @@ const Footer = () => {
         <div className="footer-section">
           <h4 className="footer-heading">Quick Links</h4>
           <ul className="footer-nav">
-            <li><Link to="/" className="nav-link">Home</Link></li>
-            <li><Link to="/about" className="nav-link">About</Link></li>
-            <li><Link to="/services" className="nav-link">Services</Link></li>
-            <li><Link to="/products" className="nav-link">Products</Link></li>
-            <li><Link to="/contact" className="nav-link">Contact</Link></li>
+            <li><a href="#home" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a></li>
+            <li><a href="#about" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
+            <li><a href="#services" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
+            <li><a href="#products" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('products'); }}>Products</a></li>
+            <li><a href="#contact" className="nav-link" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a></li>
           </ul>
         </div>
         
@@ -32,8 +38,8 @@ const Footer = () => {
           <h4 className="footer-heading">Contact Us</h4>
           <p>123 Medical Drive</p>
           <p>Health City, HC 12345</p>
-          <p>Phone: (123) 456-7890</p>
-          <p>Email: info@medicarehospital.com</p>
+          <p><a href="tel:8649754397" className="nav-link">Phone: 864-975-4397</a></p>
+          <p><a href="mailto:info@medicarehospital.com" className="nav-link">Email: info@medicarehospital.com</a></p>
         </div>
       </div>
       
