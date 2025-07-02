@@ -7,7 +7,7 @@ const Home = () => {
     <div className="home" id="home">
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome to MediCare Hospital-management</h1>
+          <h1 className="hero-title">Welcome to MediCare Hospital</h1>
           <p className="hero-description">
             At MediCare Hospital, we are committed to providing comprehensive and compassionate healthcare services. 
             With expert doctors, cutting-edge technology, and patient-centered care, your health is in safe hands.
